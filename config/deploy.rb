@@ -10,13 +10,13 @@ require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :user, 'root'
-set :domain, '104.131.89.83'
+set :domain, '104.131.23.43'
 set :deploy_to, '/var/www/aquiub'
 set :app_path, lambda { "#{deploy_to}/#{current_path}" }
-set :repository, 'git@github.com:labora/platform.git'
+set :repository, 'git@github.com:sago2k8/aquiub'
 set :branch, 'master'
 # For system-wide RVM install.
-#   set :rvm_path, '/usr/local/rvm/bin/rvm'
+ # set :rvm_path, '/usr/local/rvm/bin/rvm'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
@@ -32,10 +32,10 @@ set :shared_paths, ['log','config/application.yml','deploy/padrino-jobs.conf']
 task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  # invoke :'rbenv:load'
+  invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-   invoke :'rvm:use[ruby-2.3.1@default]'
+   # invoke :'rvm:use[ruby-2.3.0@default]'
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
