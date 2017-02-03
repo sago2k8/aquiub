@@ -1,0 +1,10 @@
+---
+:orm: mongoid
+:test: rspec
+:mock: rr
+:script: jquery
+:renderer: haml
+:stylesheet: sass
+:namespace: Aquiub
+:migration_format: number
+:admin_renderer: haml

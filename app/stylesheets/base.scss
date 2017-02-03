@@ -1,0 +1,499 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+/* Global Components*/
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+nav {
+  background-color: transparent !important;
+}
+
+body {
+    @include body-font;
+    overflow-x: hidden;
+}
+
+a {
+    @include transition-all;
+    color: $theme-primary;
+    &:hover,
+    &:focus {
+        color: darken($theme-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: fade($gray-darker, 10%);
+}
+
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-font;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Navigation*/
+
+.navbar-default {
+    background-color: transparent !important;
+    border-color: fade($gray-darker, 5%);
+    @include transition-all;
+    @include heading-font;
+    .navbar-header .navbar-brand {
+        @include heading-font;
+        color: white;
+        &:hover,
+        &:focus {
+            color: darken(white, 10%);
+        }
+    }
+    .navbar-header .navbar-toggle {
+        font-size: 12px;
+        color: white;
+        padding: 8px 10px;
+    }
+    .nav {
+      margin-top: 3%;
+        > li {
+            > a {
+                @include alt-font;
+                font-size: 18px;
+                text-transform: capitalize !important;
+
+            }
+            > a,
+            > a:focus {
+                color: white;
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+            &.active {
+                > a,
+                > a:focus {
+                    color: white !important;
+                    background-color: transparent !important;
+                    text-decoration: underline;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        background-color: transparent !important;
+        border-color: transparent;
+        .navbar-header .navbar-brand {
+            color: fade(white, 70%);
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: fade(white, 70%);
+            &:hover {
+                color: white;
+            }
+        }
+        &.affix {
+            background-color: rgba(255,255,255,0.2)!important;
+            border-color: fade($gray-darker, 10%);
+            .navbar-header .navbar-brand {
+                color: white;
+                &:hover,
+                &:focus {
+                    color: white;
+                }
+            }
+            .navbar-collapse {
+              .logo {
+                display: none
+              }
+            }
+            .nav {
+              margin-top: 0;
+            }
+            .nav > li > a,
+            .nav > li > a:focus {
+                color: white;
+                &:hover {
+                    color:white;
+                }
+            }
+
+        }
+    }
+}
+
+/* Homepage Header*/
+
+header {
+    z-index: 1000;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    min-height: auto;
+    background: url("../img/foto-cabecera-completa.png"); /* fallback for old browsers */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center ;
+    color: white;
+    .header-title-container {
+      position: relative;
+      top: 20vh;
+      .header-title-container-body {
+        h4 {
+        font-size: 45px;
+        span {
+          font-size: 85px !important;
+        }
+      }
+    }
+    }
+}
+
+
+/* Sections*/
+
+section {
+    h2 {
+        font-size: 50px;
+    }
+}
+
+section.about {
+    padding: 0 0;
+    position: relative;
+    height: 50vh;
+    min-height: auto;
+    z-index: 100 ;
+    .img-about {
+      position: absolute;
+      right:-100px;
+      top: -50px;
+      height: 55vh;
+      min-height: 300px;
+      z-index: 10;
+    }
+    .text-about {
+      height: 50vh;
+      padding: 10vh 0 ;
+      line-height: 50vh;
+      min-height: 300px;
+      z-index: 20;
+      .text-about-title {
+        vertical-align: middle;
+        margin: 5vh 0 ;
+        font-size: 50px;
+        h2 {
+          height: 100% ;
+        }
+      }
+      .text-about-body {
+        vertical-align: middle;
+      }
+    }
+}
+
+section.portfolio {
+    position: relative;
+    background: $theme-primary;
+    height: 100%;
+    min-height:250px ;
+    z-index: 1000;
+    padding: 20px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    .container .row {
+      height: 100%;
+      min-height: 250px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+       -ms-flex-line-pack: center;
+           align-content: center;
+       -webkit-box-pack: center;
+           -ms-flex-pack: center;
+               justify-content: center;
+    }
+
+    .entry {
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column ;
+                      flex-direction: column ;
+
+    }
+
+    .portfolio-title {
+      color: white;
+      height: 80px;
+    }
+    .caption {
+        color: white;
+        width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .thumbnail {
+        border: 0 none;
+        box-shadow: none;
+        margin:0;
+        padding:0;
+    }
+
+    .section-heading {
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        margin-bottom: 100px;
+    }
+    .device-container,
+    .feature-item {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .device-container {
+        margin-bottom: 100px;
+        @media(min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+    .feature-item {
+        text-align: center;
+        margin-bottom: 100px;
+        h3 {
+            font-size: 30px;
+        }
+        i {
+            font-size: 80px;
+              background: -webkit-linear-gradient(to left, $theme-secondary , $theme-tertiary);
+              background: -webkit-linear-gradient(right, $theme-secondary , $theme-tertiary);
+              background: linear-gradient(to left, $theme-secondary , $theme-tertiary);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+        }
+    }
+    @media(min-width: 992px) {
+        .device-container,
+        .feature-item {
+            max-width: none;
+        }
+    }
+}
+
+section.cta {
+    position: relative;
+    background-size: cover ;
+    background-position: center;
+    background-image: url('../img/bg-cta.jpg');
+    padding: 250px 0;
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: white;
+            max-width: 450px;
+            font-size: 50px;
+        }
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 80px;
+            }
+        }
+    }
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: fade(black, 50%);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+section.contact {
+    background: url('../img/foto-contacto-completa.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
+    min-height: auto;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 450px ;
+    .form-control {
+      border-radius: 0;
+    }
+    .send-button {
+      border-radius: 0 !important;
+      background-color: $theme-primary;
+      border: none;
+      text-transform: capitalize;
+      color: white;
+    }
+    .title-contact-form {
+      color: $theme-primary;
+      margin-top: 5vh;
+    }
+    .logo-contact {
+      width: 50px;
+    }
+    .logo-contact path {
+      fill: blue
+    }
+     .send-button:hover {
+      background-color: darken($theme-primary, 50%);
+     }
+  }
+
+footer {
+    background-color: $gray-darker;
+    padding: 25px 0;
+    color: fade(white, 30%);
+    text-align: center;
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    ul {
+        margin-bottom: 0;
+        li {
+            a {
+                font-size: 12px;
+                color: fade(white, 30%);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* Bootstrap Overrides*/
+.bg-white{
+  background: white;
+}
+.bg-primary {
+    background: $theme-primary;
+    background: -webkit-linear-gradient($theme-primary , darken($theme-primary, 5%));
+    background: linear-gradient($theme-primary , darken($theme-primary, 5%));
+}
+
+.text-primary {
+    color: $theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+/* Button Styles*/
+.btn-outline {
+    color: white;
+    border-color: white;
+    border: 1px solid;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: white;
+        background-color: $theme-primary;
+        border-color: $theme-primary;
+    }
+}
+
+.btn {
+    @include alt-font;
+    border-radius: 300px;
+}
+
+.btn-xl {
+    padding: 15px 45px;
+    font-size: 11px;
+}
+
+/* Extras*/
+/* -- Highlight Color Customization*/
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: $gray-darker;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: $gray-darker;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: $gray-darker;
+}
