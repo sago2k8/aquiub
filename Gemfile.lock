@@ -66,6 +66,7 @@ GEM
       padrino-core (= 0.13.2)
     padrino-support (0.13.2)
       activesupport (>= 3.1)
+    puma (3.6.2)
     rack (1.6.5)
     rack-protection (1.5.3)
       rack
@@ -106,6 +107,7 @@ DEPENDENCIES
   haml
   mongoid (>= 3.0.0)
   padrino (= 0.13.2)
+  puma
   rack-test
   rake
   rr
