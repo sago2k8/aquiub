@@ -3,6 +3,7 @@ class Place
   include Mongoid::Document
 
   field :name,                          type: String
+  field :address,                       type: String
   field :latitude,                      type: String
   field :longitude,                     type: String
 
@@ -22,9 +23,16 @@ class Place
   def get_pestanas_picture_url
     self.pestanas_picture_url.blank? ? 'https://s3-us-west-2.amazonaws.com/laboratoday/public/images/default_profile_picture.png' : self.pestanas_picture_url
   end
-  
+
   def get_cejas_picture_url
     self.cejas_picture_url.blank? ? 'https://s3-us-west-2.amazonaws.com/laboratoday/public/images/default_profile_picture.png' : self.cejas_picture_url
   end
 
+  def get_place_pitures
+    urls = []
+    self.place_pictures.each do |p|
+      urls << p.get_picture_url
+    end
+    urls
+  end
 end
