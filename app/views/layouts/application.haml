@@ -34,15 +34,16 @@
             %img.img-responsive{:src => "/img/logo-aquiub-white.png"}/
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a.page-scroll{:href => "#about"} Aquiub
-            %li
-              %a.page-scroll{:href => '/catalogo'} Catálogo
-            %li
-              %a.page-scroll{:href => "#portfolio"} Portafolio
-            %li
-              %a.page-scroll{:href => "#gallery"} Galeria
-            %li
-              %a.page-scroll{:href => "#contact"} Contacto
+              %a.page-scroll{:href => "/"} Aquiub
+            -if url(:base, :index) == env['REQUEST_URI']
+              %li
+                %a.page-scroll{:href => "#portfolio"} Portafolio
+              %li
+                %a.page-scroll{:href => "#gallery"} Galeria
+              %li
+                %a.page-scroll{:href => "#contact"} Contacto
+              %li
+                %a.page-scroll{:href => '/catalogo'} Catálogo
     .base-container{role: 'main'}
       = yield
     / Latest compiled and minified JavaScript

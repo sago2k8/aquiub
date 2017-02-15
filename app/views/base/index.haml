@@ -7,7 +7,7 @@
             Tu casa de
             %span Pestañas
 %section.about.bg-white.text-center{:id => "about"}
-  %img.img-about{:alt => "", :src => "img/ImageNosotros.png"}/
+  %img.img-about.hidden-md-down{:alt => "", :src => "img/ImageNosotros.png"}/
   .container
     .row.text-about
       .col-xs-12.col-md-3.text-about-title
@@ -29,22 +29,23 @@
     .row
       .col-md-3.col-xs-12.title-container
         %h2.text-center.portfolio-title Portafolio
-      .col-xs-12.col-md-9.owl-carousel
-        .item
-          .thumbnail.text-center
-            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-            .caption
-              %h4 Lorem ipsum dolor sit amet, consectetur
-        .item
-          .thumbnail.text-center
-            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-            .caption
-              %h4 Lorem ipsum dolor sit amet, consectetur
-        .item
-          .thumbnail.text-center
-            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-            .caption
-              %h4 Lorem ipsum dolor sit amet, consectetur
+      .col-xs-12.col-md-9
+        .owl-carousel
+          .item
+            .thumbnail.text-center
+              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              .caption
+                %h4 Servicios
+          .item
+            .thumbnail.text-center
+              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              .caption
+                %h4 Productos
+          .item
+            .thumbnail.text-center
+              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              .caption
+                %h4 Capacitaciones
 %section.gallery#gallery
   .row
     .col-xs-12.title
