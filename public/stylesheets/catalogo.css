@@ -1,0 +1,54 @@
+header.catalogo {
+  z-index: 1000;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  min-height: auto;
+  background: url("../img/foto-cabecera-completa.png");
+  /* fallback for old browsers */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: white; }
+  header.catalogo .header-title-container {
+    position: relative;
+    top: 20vh;
+    margin: 0;
+    padding: 0 50px; }
+    header.catalogo .header-title-container .header-title-container-body h4 {
+      font-size: 45px; }
+      header.catalogo .header-title-container .header-title-container-body h4 span {
+        font-size: 85px !important; }
+
+.catalogo-container {
+  width: 100%;
+  padding: 0 15%; }
+  .catalogo-container .catalogo-title-bar {
+    width: 100%;
+    background: #a8276f;
+    text-align: left;
+    color: white;
+    font-size: 28px;
+    height: auto;
+    padding: 0 0 0 10px;
+    margin: 50px 0 0 0; }
+  .catalogo-container .table-container .entry {
+    padding: 10px 15px;
+    margin: 15px 0; }
+    .catalogo-container .table-container .entry .image-container {
+      display: block;
+      width: 100%;
+      padding: 100% 0 0 0;
+      background-size: cover;
+      background-position: 50%; }
+    .catalogo-container .table-container .entry .name {
+      display: block;
+      color: #a8276f;
+      margin: 10px 0 0 0; }
+    .catalogo-container .table-container .entry .description {
+      display: block;
+      border-top: 1px solid #a8276f;
+      margin: 15px 0 0 0;
+      padding: 10px 0 0 0; }
+
+/*# sourceMappingURL=catalogo.css.map */
