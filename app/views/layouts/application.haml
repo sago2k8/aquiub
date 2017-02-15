@@ -15,6 +15,9 @@
     = stylesheet_link_tag :base
     = stylesheet_link_tag :catalogo
     = stylesheet_link_tag :sede
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.css", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css", :rel => "stylesheet"}/
 
   %body
     %nav#mainNav.navbar.navbar-default.navbar-fixed-top
@@ -37,10 +40,14 @@
             %li
               %a.page-scroll{:href => "#portfolio"} Portafolio
             %li
+              %a.page-scroll{:href => "#gallery"} Galeria
+            %li
               %a.page-scroll{:href => "#contact"} Contacto
     .base-container{role: 'main'}
       = yield
     / Latest compiled and minified JavaScript
     = javascript_include_tag 'jquery-1.11.0.min'
     %script{:crossorigin => "anonymous", :integrity => "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"}
     = javascript_include_tag :application

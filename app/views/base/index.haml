@@ -18,45 +18,41 @@
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       .col-xs-12.col-md-3.text-about-body
         %h4.black-text.text-left
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          consequat. Duis aute irure dolor in reprehenderit in voluptateid est laborum.
 %section.portfolio{:id => "portfolio"}
   .container
     .row
-      .col-md-3.entry
+      .col-md-3.col-xs-12.title-container
         %h2.text-center.portfolio-title Portafolio
-      .col-md-3.entry
-        .col-sm-12.thumbnail.text-center
-          %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-          .caption
-            %h4 Lorem ipsum dolor sit amet, consectetur
-      .col-md-3.entry
-        .col-sm-12.thumbnail.text-center
-          %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-          .caption
-            %h4 Lorem ipsum dolor sit amet, consectetur
-      .col-md-3.entry
-        .col-sm-12.thumbnail.text-center
-          %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
-          .caption
-            %h4 Lorem ipsum dolor sit amet, consectetur
-/ %section.cta
-/   .cta-content
-/     .container
-/       %h2
-/         Stop waiting.
-/         %br>/
-/         Start building.
-/       %a.btn.btn-outline.btn-xl.page-scroll{:href => "#contact"} Let's Get Started!
-/   .overlay
+      .col-xs-12.col-md-9.owl-carousel
+        .item
+          .thumbnail.text-center
+            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+            .caption
+              %h4 Lorem ipsum dolor sit amet, consectetur
+        .item
+          .thumbnail.text-center
+            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+            .caption
+              %h4 Lorem ipsum dolor sit amet, consectetur
+        .item
+          .thumbnail.text-center
+            %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+            .caption
+              %h4 Lorem ipsum dolor sit amet, consectetur
+%section.gallery#gallery
+  .row
+    .col-xs-12.title
+      %h2
+        Galeria
+    .col-xs-12#gallery_container
+
+
 %section#contact.contact
   .container
     .col-md-6.col-md-offset-3.col-xs-12.col-sm-8.col-sm-offset-1.contact-form

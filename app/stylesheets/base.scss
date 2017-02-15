@@ -224,21 +224,28 @@ section.portfolio {
     position: relative;
     background: $theme-primary;
     height: 100%;
-    min-height:250px ;
     z-index: 1000;
     padding: 20px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -ms-flex-line-pack: center;
         align-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
 
     .container .row {
       height: 100%;
-      min-height: 250px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -327,6 +334,13 @@ section.portfolio {
             max-width: none;
         }
     }
+}
+
+section.gallery {
+  .title {
+    text-align: center;
+    color:#a8276f;
+  }
 }
 
 section.cta {

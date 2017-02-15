@@ -179,20 +179,27 @@ section.portfolio {
   position: relative;
   background: #b22f7b;
   height: 100%;
-  min-height: 250px;
   z-index: 1000;
   padding: 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
   section.portfolio .container .row {
     height: 100%;
-    min-height: 250px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -261,6 +268,10 @@ section.portfolio {
     section.portfolio .device-container,
     section.portfolio .feature-item {
       max-width: none; } }
+
+section.gallery .title {
+  text-align: center;
+  color: #a8276f; }
 
 section.cta {
   position: relative;
