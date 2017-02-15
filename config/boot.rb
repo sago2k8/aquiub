@@ -54,3 +54,5 @@ Padrino.after_load do
 end
 
 Padrino.load!
+
+CarrierWave.root = File.join(Padrino.root, "public")

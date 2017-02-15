@@ -1,0 +1,19 @@
+%header.catalogo
+  .container
+    .row
+      .row.header-title-container
+        .col-sm-4.header-title-container-body
+          %h4.text-left
+            Productos
+
+.catalogo-container
+  .catalogo-title-bar
+    Catálogo de Productos
+  .table-container
+    - Product.all.each do |p|
+      .entry.col-sm-3
+        .image-container{ style: "background-image: url(#{p.get_picture_url})" }
+        .name
+          = p.name
+        .description
+          = p.description

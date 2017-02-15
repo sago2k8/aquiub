@@ -21,6 +21,8 @@ gem 'bcrypt'
 gem 'sass'
 gem 'haml'
 gem 'mongoid', '>= 3.0.0'
+gem 'carrierwave', :require => 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 # Test requirements
 gem 'rr', :require => false, :group => 'test'

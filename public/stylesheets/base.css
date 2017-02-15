@@ -122,7 +122,7 @@ p {
             color: white; } }
 
 /* Homepage Header*/
-header {
+header.index {
   z-index: 1000;
   position: relative;
   height: 100vh;
@@ -134,12 +134,12 @@ header {
   background-size: cover;
   background-position: top center;
   color: white; }
-  header .header-title-container {
+  header.index .header-title-container {
     position: relative;
     top: 20vh; }
-    header .header-title-container .header-title-container-body h4 {
+    header.index .header-title-container .header-title-container-body h4 {
       font-size: 45px; }
-      header .header-title-container .header-title-container-body h4 span {
+      header.index .header-title-container .header-title-container-body h4 span {
         font-size: 85px !important; }
 
 /* Sections*/

@@ -13,6 +13,7 @@
     / Optional theme
     = favicon_tag 'favicon.png'
     = stylesheet_link_tag :base
+    = stylesheet_link_tag :catalogo
 
   %body
     %nav#mainNav.navbar.navbar-default.navbar-fixed-top
@@ -30,6 +31,8 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               %a.page-scroll{:href => "#about"} Aquiub
+            %li
+              %a.page-scroll{:href => '/catalogo'} Catálogo
             %li
               %a.page-scroll{:href => "#portfolio"} Portafolio
             %li
