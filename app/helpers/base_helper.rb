@@ -3,9 +3,7 @@
 module Aquiub
   class App
     module BaseHelper
-      # def simple_helper_method
-      # ...
-      # end
+
     end
 
     helpers BaseHelper

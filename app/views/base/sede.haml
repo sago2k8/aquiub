@@ -1,0 +1,27 @@
+%header.sede{ style: "background-image: url(#{@sede.get_header_picture_url})" }
+  .container
+    .row
+      .row.header-title-container
+        .col-sm-4.header-title-container-body
+          %h4.text-left
+            = @sede.name
+
+.sede-container
+  .service-type-box.col-sm-6
+    .service-type-picture{ style: "background-image: url(#{@sede.get_pestanas_picture_url})" }
+    .service-type-name
+      Pestañas
+    .service-list-title
+      Servicios Disponibles en esta Sede:
+    - @service_pestanas.each do |s|
+      .service-entry
+        = s.name
+  .service-type-box.col-sm-6
+    .service-type-picture{ style: "background-image: url(#{@sede.get_cejas_picture_url})" }
+    .service-type-name
+      Cejas
+    .service-list-title
+      Servicios Disponibles en esta Sede:
+    - @service_cejas.each do |s|
+      .service-entry
+        = s.name
