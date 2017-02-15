@@ -175,6 +175,7 @@ section.about {
       vertical-align: middle; }
 
 section.portfolio {
+  width: 100vw;
   position: relative;
   background: #b22f7b;
   height: 100%;
