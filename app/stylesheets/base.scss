@@ -473,3 +473,11 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: $gray-darker;
 }
+
+.places-list {
+    margin-top: 25px;
+    a{
+    color: white;
+    font-size: 25px;
+    }
+}

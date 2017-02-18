@@ -1,0 +1,72 @@
+.row
+  .col-md-6.col-xs-12
+    - error = @place.errors.include?(:name)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :name, :class => 'control-label'
+      .controls
+        =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
+        %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    - error = @place.errors.include?(:address)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :address, :class => 'control-label'
+      .controls
+        =f.text_field :address, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:address, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :state, :class => 'control-label'
+      .controls
+        =f.text_field :state, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:state, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :city, :class => 'control-label'
+      .controls
+        =f.text_field :city, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:city, :class => 'text-error') : pat(:example)
+    - error = @place.errors.include?(:latitude)
+  .col-md-3.col-md-6
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :latitude, :class => 'control-label'
+      .controls
+        =f.text_field :latitude, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:latitude, :class => 'text-error') : pat(:example)
+  .col-md-3.col-xs-6
+    - error = @place.errors.include?(:longitude)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :longitude, :class => 'control-label'
+      .controls
+        =f.text_field :longitude, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:longitude, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    - error = @place.errors.include?(:header_picture)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :header_picture, :class => 'control-label'
+      .controls
+        =f.text_field :header_picture, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:header_picture, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    - error = @place.errors.include?(:pestanas_picture)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :pestanas_picture, :class => 'control-label'
+      .controls
+        =f.text_field :pestanas_picture, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:pestanas_picture, :class => 'text-error') : pat(:example)
+  .col-md-6.col-xs-12
+    - error = @place.errors.include?(:cejas_picture)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :cejas_picture, :class => 'control-label'
+      .controls
+        =f.text_field :cejas_picture, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:cejas_picture, :class => 'text-error') : pat(:example)
+  .col-xs-12
+    #map{:style => "width: 300px;height: 300px;"}
+    %a.btn.btn-primary#find-on-map{:href => "#"}
+      Find-on-map
+  .form-actions
+    =f.submit pat(:save), :class => 'btn btn-primary'
+    &nbsp;
+    =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+    &nbsp;
+    =link_to pat(:cancel), url(:places, :index), :class => 'btn btn-default'

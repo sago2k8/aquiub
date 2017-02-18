@@ -7,6 +7,7 @@ Aquiub::App.controllers :base,  map: '/' do
   end
 
   get :index do
+    @sedes = Place.all
     render :index
   end
 

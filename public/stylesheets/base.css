@@ -370,4 +370,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222; }
 
+.places-list {
+  margin-top: 25px; }
+  .places-list a {
+    color: white;
+    font-size: 25px; }
+
 /*# sourceMappingURL=base.css.map */

@@ -4,8 +4,10 @@ class Place
 
   field :name,                          type: String
   field :address,                       type: String
-  field :latitude,                      type: String
-  field :longitude,                     type: String
+  field :latitude,                      type: Float
+  field :longitude,                     type: Float
+  field :state,                         type: String
+  field :city,                          type: String
 
   mount_uploader :header_picture,       ImageUploader
   mount_uploader :pestanas_picture,     ImageUploader

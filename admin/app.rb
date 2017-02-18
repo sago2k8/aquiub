@@ -32,6 +32,9 @@ module Aquiub
     end
 
     access_control.roles_for :admin do |role|
+      role.project_module :services, '/services'
+      role.project_module :products, '/products'
+      role.project_module :places, '/places'
       role.project_module :specials, '/specials'
       role.project_module :accounts, '/accounts'
     end

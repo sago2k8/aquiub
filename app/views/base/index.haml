@@ -71,3 +71,7 @@
         .form-group
           %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
         %button.btn.send-button{:type => "submit"} Enviar
+      .col-xs-12.places-list
+        -@sedes.each do |s|
+          %a{ href: url(:base, :sede, s.id) }=s.name
+
