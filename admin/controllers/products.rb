@@ -12,7 +12,8 @@ Aquiub::Admin.controllers :products do
   end
 
   post :create do
-    @product = Product.new(params[:product])
+    @product = Product.new(params[:product].except('product_picture'))
+    @product.product_picture = params[:product][:product_picture]
     if @product.save
       @title = pat(:create_title, :model => "product #{@product.id}")
       flash[:success] = pat(:create_success, :model => 'Product')
@@ -39,11 +40,17 @@ Aquiub::Admin.controllers :products do
     @title = pat(:update_title, :model => "product #{params[:id]}")
     @product = Product.find(params[:id])
     if @product
-      if @product.update_attributes(params[:product])
-        flash[:success] = pat(:update_success, :model => 'Product', :id =>  "#{params[:id]}")
-        params[:save_and_continue] ?
-          redirect(url(:products, :index)) :
-          redirect(url(:products, :edit, :id => @product.id))
+      if @product.update_attributes(params[:product].except('product_picture'))
+        @product.product_picture = params[:product][:product_picture]
+        if @product.save
+          flash[:success] = pat(:update_success, :model => 'Product', :id =>  "#{params[:id]}")
+          params[:save_and_continue] ?
+            redirect(url(:products, :index)) :
+            redirect(url(:products, :edit, :id => @product.id))
+        else
+          flash.now[:error] = pat(:update_error, :model => 'product')
+          render 'products/edit'
+        end
       else
         flash.now[:error] = pat(:update_error, :model => 'product')
         render 'products/edit'

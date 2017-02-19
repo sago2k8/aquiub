@@ -16,6 +16,13 @@
   .controls
     =f.text_field :expiration, :class => 'form-control input-large input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:expiration, :class => 'text-error') : pat(:example)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :picture, :class => 'control-label'
+  .controls
+    =f.file_field :picture, :class => 'form-control input-large input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:picture, :class => 'text-error') : pat(:example)
+  .image
+    %img{ src: @special.picture }
 
 .form-actions
   =f.submit pat(:save), :class => 'btn btn-primary'

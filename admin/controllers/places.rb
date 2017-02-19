@@ -12,8 +12,11 @@ Aquiub::Admin.controllers :places do
   end
 
   post :create do
-    @place = Place.new(params[:place])
+    @place = Place.new(params[:place].except('pictures'))
     if @place.save
+      params[:place][:pictures].each do |image|
+        PlacePicture.create!(place: @place, picture: image)
+      end
       @title = pat(:create_title, :model => "place #{@place.id}")
       flash[:success] = pat(:create_success, :model => 'Place')
       params[:save_and_continue] ? redirect(url(:places, :index)) : redirect(url(:places, :edit, :id => @place.id))

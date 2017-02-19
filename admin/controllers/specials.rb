@@ -12,7 +12,8 @@ Aquiub::Admin.controllers :specials do
   end
 
   post :create do
-    @special = Special.new(params[:special])
+    @special = Special.new(params[:special].except('picture'))
+    @special.picture = params[:special][:picture]
     if @special.save
       @title = pat(:create_title, :model => "special #{@special.id}")
       flash[:success] = pat(:create_success, :model => 'Special')
@@ -39,11 +40,17 @@ Aquiub::Admin.controllers :specials do
     @title = pat(:update_title, :model => "special #{params[:id]}")
     @special = Special.find(params[:id])
     if @special
-      if @special.update_attributes(params[:special])
-        flash[:success] = pat(:update_success, :model => 'Special', :id =>  "#{params[:id]}")
-        params[:save_and_continue] ?
-          redirect(url(:specials, :index)) :
-          redirect(url(:specials, :edit, :id => @special.id))
+      if @special.update_attributes(params[:special].except('picture'))
+        @special.picture = params[:special][:picture]
+        if @special.save
+          flash[:success] = pat(:update_success, :model => 'Special', :id =>  "#{params[:id]}")
+          params[:save_and_continue] ?
+            redirect(url(:specials, :index)) :
+            redirect(url(:specials, :edit, :id => @special.id))
+        else
+          flash.now[:error] = pat(:update_error, :model => 'special')
+          render 'specials/edit'
+        end
       else
         flash.now[:error] = pat(:update_error, :model => 'special')
         render 'specials/edit'
