@@ -33,17 +33,20 @@
         .owl-carousel
           .item
             .thumbnail.text-center
-              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              %a{ href: url(:base, :catalogo)}
+                %img.img-responsive{:alt => "", :src => "/img/foto-servicios.jpg"}/
               .caption
                 %h4 Servicios
           .item
             .thumbnail.text-center
-              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              %a{ href: url(:base, :catalogo)}
+                %img.img-responsive{:alt => "", :src => "/img/foto-productos.jpg"}/
               .caption
                 %h4 Productos
           .item
             .thumbnail.text-center
-              %img.img-responsive{:alt => "", :src => "http://www.wallpapereast.com/static/images/6801692-lovely-nature-wallpaper.jpg"}/
+              %a{ href: url(:base, :catalogo)}
+                %img.img-responsive{:alt => "", :src => "/img/foto-capacitaciones.jpg"}/
               .caption
                 %h4 Capacitaciones
 %section.gallery#gallery
@@ -71,7 +74,8 @@
         .form-group
           %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
         %button.btn.send-button{:type => "submit"} Enviar
-      .col-xs-12.places-list
-        -@sedes.each do |s|
-          %a{ href: url(:base, :sede, s.id) }=s.name
+  .col-xs-12.places-list
+    -@sedes.each do |s|
+      %a{ href: url(:base, :sede, s.id) }=s.name
+  %img.footer-cinta{:src => "/img/forma.png"}/
 
