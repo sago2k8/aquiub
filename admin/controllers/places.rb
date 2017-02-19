@@ -39,7 +39,10 @@ Aquiub::Admin.controllers :places do
     @title = pat(:update_title, :model => "place #{params[:id]}")
     @place = Place.find(params[:id])
     if @place
-      if @place.update_attributes(params[:place])
+      if @place.update_attributes(params[:place].except('pictures'))
+        params[:place][:pictures].each do |image|
+          PlacePicture.create!(place: @place, picture: image)
+        end
         flash[:success] = pat(:update_success, :model => 'Place', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
           redirect(url(:places, :index)) :
