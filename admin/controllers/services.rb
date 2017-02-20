@@ -12,7 +12,8 @@ Aquiub::Admin.controllers :services do
   end
 
   post :create do
-    @service = Service.new(params[:service])
+    @service = Service.new(params[:service].except('service_picture'))
+    @service.service_picture = params[:service][:service_picture]
     if @service.save
       @title = pat(:create_title, :model => "service #{@service.id}")
       flash[:success] = pat(:create_success, :model => 'Service')
@@ -39,7 +40,8 @@ Aquiub::Admin.controllers :services do
     @title = pat(:update_title, :model => "service #{params[:id]}")
     @service = Service.find(params[:id])
     if @service
-      if @service.update_attributes(params[:service])
+      if @service.update_attributes(params[:service].except('service_picture'))
+        @service.service_picture = params[:service][:service_picture]
         flash[:success] = pat(:update_success, :model => 'Service', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
           redirect(url(:services, :index)) :
@@ -78,9 +80,9 @@ Aquiub::Admin.controllers :services do
     end
     ids = params[:service_ids].split(',').map(&:strip)
     services = Service.find(ids)
-    
+
     if services.each(&:destroy)
-    
+
       flash[:success] = pat(:destroy_many_success, :model => 'Services', :ids => "#{ids.join(', ')}")
     end
     redirect url(:services, :index)

@@ -9,10 +9,6 @@ class Place
   field :state,                         type: String
   field :city,                          type: String
 
-  mount_uploader :header_picture,       ImageUploader
-  mount_uploader :pestanas_picture,     ImageUploader
-  mount_uploader :cejas_picture,        ImageUploader
-
   has_many :services
   has_many :place_pictures
 

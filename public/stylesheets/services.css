@@ -1,0 +1,19 @@
+.lashes {
+  margin-top: 5vh;
+  margin-bottom: 5vh; }
+
+.eyebrows {
+  margin-top: 10vh;
+  margin-bottom: 5vh; }
+
+.services-content {
+  margin: 30px 0; }
+  .services-content .image-container {
+    max-height: 200px;
+    overflow: hidden; }
+  .services-content .text-container h3 {
+    color: #b22f7b;
+    text-transform: capitalize;
+    font-size: 30px; }
+
+/*# sourceMappingURL=services.css.map */

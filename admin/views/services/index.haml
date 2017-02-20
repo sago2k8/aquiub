@@ -28,7 +28,7 @@
                       .btn.btn-default.btn-small.cancel=pat(:cancel)
         %th.header= mat(:service, :name)
         %th.header= mat(:service, :type)
-        %th.header= mat(:service, :place_id)
+        -# %th.header= mat(:service, :place_id)
         %th.header.list-row-action-header
 
     %tbody
@@ -38,7 +38,7 @@
             =check_box_tag 'service_ids[]', :value => service.id, :class => 'list-selectable-checkbox'
           %td.list-column=service.name
           %td.list-column=service.type
-          %td.list-column=service.place_id
+          -# %td.list-column=service.place_id
           %td.list-column.list-row-action
             .list-row-action-wrapper
               =link_to tag_icon(:edit), :href => url(:services, :edit, :id => service.id), :rel => :tooltip, :title => "#{pat(:edit)} service", :class => 'list-row-action-wrapper-link'

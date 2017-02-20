@@ -1,0 +1,59 @@
+%header.sede{ style: "background: url('')" }
+  .container
+    .row
+      .row.header-title-container
+        .col-sm-4.header-title-container-body
+          %h4.text-left
+            Pestañas & Cejas
+  %img.footer-cinta.place{:src => "/img/cinta.png"}/
+.lashes
+  .container
+    .row
+      .places-title.lashes-title.col-xs-12
+        Pestañas
+      .row.services-content
+        -@service_pestanas.each do |p|
+          .col-xs-12.col-sm-12.col-md-6
+            .col-xs-4.image-container
+              %img.img-responsive{:src => "#{p.service_picture_url}", :alt => ""}/
+            .col-xs-8.text-container
+              %h3
+                =p.name
+              %p
+                =p.description
+.eyebrows
+  .container
+    .row
+      .places-title.eyebrows-title.col-xs-12
+        Cejas
+      .row.services-content
+        -@service_cejas.each do |p|
+          .col-xs-12.col-sm-12.col-md-6
+            .col-xs-4.image-container
+              %img.img-responsive{:src => "#{p.service_picture_url}", :alt => ""}/
+            .col-xs-8.text-container
+              %h3
+                =p.name
+              %p
+                =p.description
+%section#contact.contact
+  .container
+    .col-md-6.col-md-offset-3.col-xs-12.col-sm-8.col-sm-offset-1.contact-form
+      .title-contact-form
+        %h2
+          %img.logo-contact{:src => "/img/logo-contact.svg"}/
+          Contáctanos
+      %form{:role => "form"}
+        / text input
+        .form-group
+          %input.form-control{:placeholder => "Nombre", :required => "true", :type => "text"}/
+        .form-group
+          %input.form-control{:placeholder => "Email", :required => "true", :type => "email"}/
+        / textarea
+        .form-group
+          %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
+        %button.btn.send-button{:type => "submit"} Enviar
+  .col-xs-12.places-list
+    -@sedes.each do |s|
+      %a{ href: url(:base, :sede, s.id) }=s.name
+  %img.footer-cinta{:src => "/img/forma.png"}/

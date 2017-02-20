@@ -1,27 +1,52 @@
-%header.sede{ style: "background-image: url(#{@sede.get_header_picture_url})" }
+%header.sede{ style: "background: url(#{@sede.place_pictures.first.picture})" }
   .container
     .row
       .row.header-title-container
         .col-sm-4.header-title-container-body
           %h4.text-left
             = @sede.name
+  %img.footer-cinta.place{:src => "/img/cinta.png"}/
 
-.sede-container
-  .service-type-box.col-sm-6
-    .service-type-picture{ style: "background-image: url(#{@sede.get_pestanas_picture_url})" }
-    .service-type-name
-      Pestañas
-    .service-list-title
-      Servicios Disponibles en esta Sede:
-    - @service_pestanas.each do |s|
-      .service-entry
-        = s.name
-  .service-type-box.col-sm-6
-    .service-type-picture{ style: "background-image: url(#{@sede.get_cejas_picture_url})" }
-    .service-type-name
-      Cejas
-    .service-list-title
-      Servicios Disponibles en esta Sede:
-    - @service_cejas.each do |s|
-      .service-entry
-        = s.name
+
+.row.sede-container
+  .container
+    .service-type-box.col-xs-12.col-sm-6
+      .service-type-picture{ style: "background-image: url(#{@service_pestanas.last.service_picture_url})" }
+      .service-type-name
+        Pestañas
+      .service-list-title
+        Servicios Disponibles en esta Sede:
+      - @service_pestanas.each do |s|
+        .service-entry
+          = s.name
+    .service-type-box.col-xs-12.col-sm-6
+      .service-type-picture{ style: "background-image: url(#{@service_cejas.last.service_picture_url})" }
+      .service-type-name
+        Cejas
+      .service-list-title
+        Servicios Disponibles en esta Sede:
+      - @service_cejas.each do |s|
+        .service-entry
+          = s.name
+%section.sede-gallery
+  .container
+    .row
+      .gallery-title.col-xs-12.places-title
+        Instalaciones
+  .container
+    .row
+      - @sede.place_pictures.each do |image|
+        .col-sm-4.col-xs-6.col-md-3.col-lg-3
+          %a.thumbnail.fancybox{:href => image.picture, :rel => "ligthbox"}
+            %img.img-responsive{:alt =>"" , :src => image.picture}/
+%section.map-container
+  .container
+    .row
+      .map-title.col-xs-12.places-title
+        Ubicaciòn
+      .col-xs-12.address
+        %i.fa.fa-map-marker{"aria-hidden" => "true"}
+        =@sede.address
+  .col-xs-12.map
+    %iframe.gmap{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyDGAf4J1m4Oyy_XA-tZBDQunUq168oycJI&q=#{@sede.latitude},#{@sede.longitude}&zoom=18", :style => "border:0", :width => "100%"}
+    %img.footer-cinta.place{:src => "/img/forma.png"}/

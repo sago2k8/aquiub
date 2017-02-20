@@ -47,9 +47,12 @@
         =f.file_field :pictures, :class => 'form-control input-large input-with-feedback', multiple: true
         %span.help-inline=error ? f.error_message_on(:header_picture, :class => 'text-error') : pat(:example)
       .images
-        - @place.place_pictures.each do |image|
-          .place-picture
-            %img{ src: image.picture }
+        .container
+          .row
+            - @place.place_pictures.each do |image|
+              .col-sm-4.col-xs-6.col-md-3.col-lg-2
+                %a.thumbnail.fancybox{:href => image.picture, :rel => "ligthbox"}
+                  %img.img-responsive{:alt =>"" , :src => image.picture}/
   .col-xs-12
     #map{:style => "width: 300px;height: 300px;"}
     %a.btn.btn-primary#find-on-map{:href => "#"}

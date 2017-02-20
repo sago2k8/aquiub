@@ -30,9 +30,9 @@
         %th.header= mat(:place, :address)
         %th.header= mat(:place, :latitude)
         %th.header= mat(:place, :longitude)
-        %th.header= mat(:place, :header_picture)
-        %th.header= mat(:place, :pestanas_picture)
-        %th.header= mat(:place, :cejas_picture)
+        -# %th.header= mat(:place, :header_picture)
+        -# %th.header= mat(:place, :pestanas_picture)
+        -# %th.header= mat(:place, :cejas_picture)
         %th.header.list-row-action-header
 
     %tbody
@@ -44,9 +44,9 @@
           %td.list-column=place.address
           %td.list-column=place.latitude
           %td.list-column=place.longitude
-          %td.list-column=place.header_picture
-          %td.list-column=place.pestanas_picture
-          %td.list-column=place.cejas_picture
+          -# %td.list-column=place.header_picture
+          -# %td.list-column=place.pestanas_picture
+          -# %td.list-column=place.cejas_picture
           %td.list-column.list-row-action
             .list-row-action-wrapper
               =link_to tag_icon(:edit), :href => url(:places, :edit, :id => place.id), :rel => :tooltip, :title => "#{pat(:edit)} place", :class => 'list-row-action-wrapper-link'

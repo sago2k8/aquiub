@@ -2,6 +2,7 @@
 @import "mixins.scss";
 
 /* Global Components*/
+$brand-primary: #b22f7b;
 html,
 body {
     height: 100%;
@@ -372,12 +373,6 @@ section.contact {
      .send-button:hover {
       background-color: darken($theme-primary, 50%);
      }
-  .footer-cinta {
-    width: 100vw;
-    position: relative;
-    bottom: 0;
-    z-index: 10000;
-  }
   }
 
 footer {
@@ -496,3 +491,15 @@ body {
     bottom: -30vh;
     }
 }
+.footer-cinta {
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+    z-index: 10000;
+    &.place{
+        position: absolute;
+    }
+  }
+@import 'catalogo';
+@import 'sede';
+@import 'services';

@@ -4,18 +4,32 @@
   .controls
     =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
     %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
+- error = @service.errors.include?(:description)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :description, :class => 'control-label'
+  .controls
+    =f.text_field :description, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    %span.help-inline=error ? f.error_message_on(:description, :class => 'text-error') : pat(:example)
 - error = @service.errors.include?(:type)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :type, :class => 'control-label'
   .controls
     =f.text_field :type, :class => 'form-control input-large input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:type, :class => 'text-error') : pat(:example)
-- error = @service.errors.include?(:place_id)
+-# - error = @service.errors.include?(:place_id)
+-# %fieldset.control-group{:class => error ? 'has-error' : ''}
+-#   =f.label :place_id, :class => 'control-label'
+-#   .controls
+-#     =f.text_field :place_id, :class => 'form-control input-large input-with-feedback'
+-#     %span.help-inline=error ? f.error_message_on(:place_id, :class => 'text-error') : pat(:example)
+- error = @service.errors.include?(:service_picture)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :place_id, :class => 'control-label'
+  =f.label :service_picture, :class => 'control-label'
   .controls
-    =f.text_field :place_id, :class => 'form-control input-large input-with-feedback'
-    %span.help-inline=error ? f.error_message_on(:place_id, :class => 'text-error') : pat(:example)
+    =f.file_field :service_picture, :class => 'form-control input-large input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:service_picture, :class => 'text-error') : pat(:example)
+  .image.col-xs-12.col-sm-3
+    %img{ src: @service.service_picture }
 
 .form-actions
   =f.submit pat(:save), :class => 'btn btn-primary'

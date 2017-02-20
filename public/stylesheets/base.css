@@ -293,11 +293,6 @@ section.contact {
     fill: blue; }
   section.contact .send-button:hover {
     background-color: black; }
-  section.contact .footer-cinta {
-    width: 100vw;
-    position: relative;
-    bottom: 0;
-    z-index: 10000; }
 
 footer {
   background-color: #222222;
@@ -389,5 +384,189 @@ body {
   @media only screen and (min-width: 720px) {
     .places-list {
       bottom: -30vh; } }
+
+.footer-cinta {
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  z-index: 10000; }
+  .footer-cinta.place {
+    position: absolute; }
+
+header.catalogo {
+  z-index: 1000;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  min-height: auto;
+  background: url("../img/foto-cabecera-completa.png");
+  /* fallback for old browsers */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: white; }
+  header.catalogo .header-title-container {
+    position: relative;
+    top: 20vh;
+    margin: 0;
+    padding: 0 50px; }
+    header.catalogo .header-title-container .header-title-container-body h4 {
+      font-size: 45px; }
+      header.catalogo .header-title-container .header-title-container-body h4 span {
+        font-size: 85px !important; }
+
+.catalogo-container {
+  width: 100%;
+  padding: 0 15%; }
+  .catalogo-container .catalogo-title-bar {
+    width: 100%;
+    background: #a8276f;
+    text-align: left;
+    color: white;
+    font-size: 28px;
+    height: auto;
+    padding: 0 0 0 10px;
+    margin: 50px 0 0 0; }
+  .catalogo-container .table-container .entry {
+    padding: 10px 15px;
+    margin: 15px 0; }
+    .catalogo-container .table-container .entry .image-container {
+      display: block;
+      width: 100%;
+      padding: 100% 0 0 0;
+      background-size: cover;
+      background-position: 50%; }
+    .catalogo-container .table-container .entry .name {
+      display: block;
+      color: #a8276f;
+      margin: 10px 0 0 0; }
+    .catalogo-container .table-container .entry .description {
+      display: block;
+      border-top: 1px solid #a8276f;
+      margin: 15px 0 0 0;
+      padding: 10px 0 0 0; }
+
+header.sede {
+  z-index: 1000;
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  min-height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center !important;
+  color: white; }
+  header.sede .header-title-container {
+    position: relative;
+    top: 20vh;
+    margin: 0;
+    padding: 0 50px; }
+    header.sede .header-title-container .header-title-container-body h4 {
+      font-size: 45px; }
+      header.sede .header-title-container .header-title-container-body h4 span {
+        font-size: 85px !important; }
+
+header.catalogo {
+  z-index: 1000;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  min-height: auto;
+  background: url("../img/foto-cabecera-completa.png");
+  /* fallback for old browsers */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: white; }
+  header.catalogo .header-title-container {
+    position: relative;
+    top: 20vh;
+    margin: 0;
+    padding: 0 50px; }
+    header.catalogo .header-title-container .header-title-container-body h4 {
+      font-size: 45px; }
+      header.catalogo .header-title-container .header-title-container-body h4 span {
+        font-size: 85px !important; }
+
+.sede-container {
+  min-height: 450px; }
+  .sede-container .service-type-box {
+    padding: 10px 15px;
+    margin: 15px 0; }
+    .sede-container .service-type-box .service-type-picture {
+      display: block;
+      width: 100%;
+      height: 150px;
+      background-position: center center !important; }
+    .sede-container .service-type-box .service-type-name {
+      display: block;
+      background: #a8276f;
+      opacity: 0.75;
+      color: white;
+      font-size: 28px;
+      height: auto;
+      padding: 0 0 0 10px;
+      margin: -40px 0 0 0; }
+    .sede-container .service-type-box .service-list-title {
+      display: block;
+      color: #a8276f;
+      margin: 15px 0 10px 0;
+      font-size: 24px; }
+    .sede-container .service-type-box .service-entry {
+      display: block;
+      margin: 0 0 10px 0;
+      color: black;
+      font-size: 20px; }
+
+.map {
+  padding: 0 !important; }
+
+@media only screen and (min-width: 1080px) {
+  .gmap {
+    margin-bottom: 100px; } }
+@media only screen and (min-width: 1284px) {
+  .gmap {
+    margin-bottom: 160px; } }
+
+.places-title {
+  display: block;
+  background: #a8276f;
+  opacity: 0.75;
+  color: white;
+  font-size: 28px;
+  height: auto;
+  padding: 0 0 0 10px;
+  margin: -40px 0 0 0; }
+
+.sede-gallery {
+  min-height: 300px;
+  margin-bottom: 30px; }
+  .sede-gallery .gallery-title {
+    margin-bottom: 30px; }
+
+.address {
+  font-size: 25px;
+  padding: 20px 10px; }
+  .address i {
+    margin-right: 15px;
+    color: #a8276f; }
+
+.lashes {
+  margin-top: 5vh;
+  margin-bottom: 5vh; }
+
+.eyebrows {
+  margin-top: 10vh;
+  margin-bottom: 5vh; }
+
+.services-content {
+  margin: 30px 0; }
+  .services-content .image-container {
+    max-height: 200px;
+    overflow: hidden; }
+  .services-content .text-container h3 {
+    color: #b22f7b;
+    text-transform: capitalize;
+    font-size: 30px; }
 
 /*# sourceMappingURL=base.css.map */
