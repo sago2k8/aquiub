@@ -8,7 +8,8 @@ class Place
   field :longitude,                     type: Float
   field :state,                         type: String
   field :city,                          type: String
-
+  field :phone,                         type: String
+  field :mobile,                        type: String
   has_many :services
   has_many :place_pictures
 

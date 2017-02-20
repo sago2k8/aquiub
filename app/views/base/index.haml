@@ -7,23 +7,18 @@
             Tu casa de
             %span Pestañas
 %section.about.bg-white.text-center{:id => "about"}
-  %img.img-about.hidden-md-down{:alt => "", :src => "img/ImageNosotros.png"}/
+  .img-about.hidden-md-down
+    %img{:alt => "", :src => "img/ImageNosotros.jpg"}/
   .container
     .row.text-about
       .col-xs-12.col-md-3.text-about-title
         %h2.text-primary.text-center Conócenos
       .col-xs-12.col-md-3.text-about-body
         %h4.black-text.text-left
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          Somos una empresa especializada en el servicio de extensiones de pestañas – cejas,  la distribución de los mejores productos para pestañas y cejas, nuestra prioridad es que nuestros clientes queden completamente satisfechos con nuestros servicios tanto en calidad como en atención. Constantemente buscamos innovar con nuevas tendencias, estilos y técnicas, esto junto con nuestros productos que son de la más alta calidad nos permite embellecer de la mejor manera a nuestras clientas
       .col-xs-12.col-md-3.text-about-body
         %h4.black-text.text-left
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptateid est laborum.
+          En Aquiub Casa de Pestañas encontrarás un equipo de especialistas con alta experiencia en el campo facial, nos caracterizamos por dar un excelente servicio y dar gran énfasis en pestañas y cejas manejando productos 100% Garantizados.
 %section.portfolio{:id => "portfolio"}
   .container
     .row
@@ -45,7 +40,7 @@
                 %h4 Productos
           .item
             .thumbnail.text-center
-              %a{ href: url(:base, :catalogo)}
+              %a{ href: url(:base, :capacitaciones)}
                 %img.img-responsive{:alt => "", :src => "/img/foto-capacitaciones.jpg"}/
               .caption
                 %h4 Capacitaciones
@@ -55,6 +50,19 @@
       %h2
         Galeria
     .col-xs-12#gallery_container
+%section.promociones#promociones
+  .container
+    .row
+      .promotions
+        -@promotions.each do |p|
+          .item
+            .col-xs-6
+              %img.img-responsive{:src => "#{p.picture_url}", :alt => ""}/
+            .col-xs-6
+              %h3
+                =p.title
+              %p
+                =p.body
 
 
 %section#contact.contact
@@ -74,8 +82,13 @@
         .form-group
           %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
         %button.btn.send-button{:type => "submit"} Enviar
-  .col-xs-12.places-list
-    -@sedes.each do |s|
-      %a{ href: url(:base, :sede, s.id) }=s.name
+  .container
+    .col-xs-12.places-list
+
+      %h2
+        Visítanos
+      %i.fa.fa-map-marker{"aria-hidden" => "true"}
+      -@sedes.each do |s|
+        %a{ href: url(:base, :sede, s.id) }=s.name
   %img.footer-cinta{:src => "/img/forma.png"}/
 

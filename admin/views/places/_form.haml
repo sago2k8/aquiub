@@ -39,6 +39,20 @@
       .controls
         =f.text_field :longitude, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:longitude, :class => 'text-error') : pat(:example)
+  .col-md-3.col-xs-6
+    - error = @place.errors.include?(:phone)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :phone, :class => 'control-label'
+      .controls
+        =f.text_field :phone, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:phone, :class => 'text-error') : pat(:example)
+  .col-md-3.col-xs-6
+    - error = @place.errors.include?(:mobile)
+    %fieldset.control-group{:class => error ? 'has-error' : ''}
+      =f.label :mobile, :class => 'control-label'
+      .controls
+        =f.text_field :mobile, :class => 'form-control input-large input-with-feedback'
+        %span.help-inline=error ? f.error_message_on(:mobile, :class => 'text-error') : pat(:example)
   .col-md-6.col-xs-12
     - error = @place.errors.include?(:header_picture)
     %fieldset.control-group{:class => error ? 'has-error' : ''}

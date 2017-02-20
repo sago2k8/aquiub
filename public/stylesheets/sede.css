@@ -4,8 +4,8 @@ header.sede {
   height: 60vh;
   width: 100%;
   min-height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   background-position: center center !important;
   color: white; }
   header.sede .header-title-container {

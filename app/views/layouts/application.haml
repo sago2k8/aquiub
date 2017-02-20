@@ -29,7 +29,8 @@
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           .col-sm-2.logo
-            %img.img-responsive{:src => "/img/logo-aquiub-white.png"}/
+            %a{:href => "/"}
+              %img.img-responsive{:src => "/img/logo-aquiub-white.png"}/
           %ul.nav.navbar-nav.navbar-right
             %li
               %a.page-scroll{:href => "/"} Aquiub
@@ -40,8 +41,6 @@
                 %a.page-scroll{:href => "#gallery"} Galeria
               %li
                 %a.page-scroll{:href => "#contact"} Contacto
-              %li
-                %a.page-scroll{:href => '/catalogo'} Catálogo
     .base-container{role: 'main'}
       = yield
     / Latest compiled and minified JavaScript

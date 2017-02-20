@@ -11,6 +11,8 @@
   .services-content .image-container {
     max-height: 200px;
     overflow: hidden; }
+  .services-content .service-entry {
+    margin-bottom: 10px; }
   .services-content .text-container h3 {
     color: #b22f7b;
     text-transform: capitalize;

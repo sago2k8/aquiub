@@ -1,0 +1,57 @@
+%header.sede.service{ style: "background: url('/img/AquiubSite-Capacitaciones.png')" }
+  .container
+    .row
+      .row.header-title-container
+        .col-sm-4.header-title-container-body
+          %h4.text-left
+            Capacitaciones
+  -# %img.footer-cinta.place{:src => "/img/cinta.png"}/
+.capacitaciones
+  .container
+    .row
+      %h2
+        Capacitaciones Aquiub
+      %h4
+        Conviertete en una especialista y en una emprendedora
+    .row
+      .col-sm-6.col-xs-12
+        %a.thumbnail.fancybox{:href => "/img/Foto-Galeria1.jpg", :rel => "ligthbox"}
+          %img.img-responsive{:alt =>"" , :src => "/img/Foto-Galeria1.jpg"}/
+      .col-sm-6.col-xs-12
+        %a.thumbnail.fancybox{:href => "/img/Foto-Galeria2.jpg", :rel => "ligthbox"}
+          %img.img-responsive{:alt =>"" , :src => "/img/Foto-Galeria2.jpg"}/
+      .col-sm-6.col-xs-12
+        %a.thumbnail.fancybox{:href => "/img/Foto-Galeria3.jpg", :rel => "ligthbox"}
+          %img.img-responsive{:alt =>"" , :src => "/img/Foto-Galeria3.jpg"}/
+      .col-sm-6.col-xs-12
+        %a.thumbnail.fancybox{:href => "/img/Foto-Galeria4.jpg", :rel => "ligthbox"}
+          %img.img-responsive{:alt =>"" , :src => "/img/Foto-Galeria4.jpg"}/
+      .col-sm-6.col-xs-12
+        %a.thumbnail.fancybox{:href => "/img/Foto-Galeria5.jpg", :rel => "ligthbox"}
+          %img.img-responsive{:alt =>"" , :src => "/img/Foto-Galeria5.jpg"}/
+
+%section#contact.contact
+  .container
+    .col-md-6.col-md-offset-3.col-xs-12.col-sm-8.col-sm-offset-1.contact-form
+      .title-contact-form
+        %h2
+          %img.logo-contact{:src => "/img/logo-contact.svg"}/
+          Recibe mas informacion
+      %form{:role => "form"}
+        / text input
+        .form-group
+          %input.form-control{:placeholder => "Nombre", :required => "true", :type => "text"}/
+        .form-group
+          %input.form-control{:placeholder => "Email", :required => "true", :type => "email"}/
+        / textarea
+        .form-group
+          %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
+        %button.btn.send-button{:type => "submit"} Enviar
+  .container
+    .col-xs-12.places-list
+      %h2
+        Visítanos
+      %i.fa.fa-map-marker{"aria-hidden" => "true"}
+      -@sedes.each do |s|
+        %a{ href: url(:base, :sede, s.id) }=s.name
+  %img.footer-cinta{:src => "/img/forma.png"}/

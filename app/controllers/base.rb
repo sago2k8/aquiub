@@ -4,9 +4,13 @@ Aquiub::App.controllers :base,  map: '/' do
   before do
     flash.clear
   end
-
+  get :capacitaciones do
+    @sedes = Place.all
+    render :capacitaciones
+  end
   get :index do
     @sedes = Place.all
+    @promotions = Special.all
     render :index
   end
 

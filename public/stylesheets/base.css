@@ -104,7 +104,7 @@ p {
         .navbar-default .nav > li > a:focus:hover {
           color: white; }
       .navbar-default.affix {
-        background-color: rgba(255, 255, 255, 0.2) !important;
+        background-color: rgba(178, 47, 123, 0.5) !important;
         border-color: fade(#222222, 10%); }
         .navbar-default.affix .navbar-header .navbar-brand {
           color: white; }
@@ -147,6 +147,7 @@ section h2 {
   font-size: 50px; }
 
 section.about {
+  width: 100vw;
   padding: 0 0;
   position: relative;
   height: 50vh;
@@ -162,10 +163,10 @@ section.about {
     height: 55vh;
     min-height: 300px;
     z-index: 10; }
+    section.about .img-about img {
+      height: 100%; }
   section.about .text-about {
-    height: 50vh;
     padding: 10vh 0;
-    line-height: 50vh;
     min-height: 300px;
     z-index: 20; }
     section.about .text-about .text-about-title {
@@ -240,31 +241,18 @@ section.gallery .title {
   text-align: center;
   color: #a8276f; }
 
-section.cta {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../img/bg-cta.jpg");
-  padding: 250px 0; }
-  section.cta .cta-content {
-    position: relative;
-    z-index: 1; }
-    section.cta .cta-content h2 {
-      margin-top: 0;
-      margin-bottom: 25px;
-      color: white;
-      max-width: 450px;
-      font-size: 50px; }
-    @media (min-width: 768px) {
-      section.cta .cta-content h2 {
-        font-size: 80px; } }
-  section.cta .overlay {
-    height: 100%;
-    width: 100%;
-    background-color: fade(black, 50%);
-    position: absolute;
-    top: 0;
-    left: 0; }
+section.promociones {
+  background-color: black;
+  min-height: 300px;
+  height: 100%;
+  padding: 50px 0;
+  color: white; }
+  section.promociones .owl-next, section.promociones .owl-prev {
+    display: none !important; }
+  section.promociones h3 {
+    color: #b22f7b;
+    font-size: 35px;
+    text-transform: uppercase; }
 
 section.contact {
   background: url("../img/foto-contacto.jpg");
@@ -275,7 +263,7 @@ section.contact {
   min-height: auto;
   text-align: center;
   vertical-align: middle;
-  min-height: 450px; }
+  min-height: 350px; }
   section.contact .form-control {
     border-radius: 0; }
   section.contact .send-button {
@@ -374,22 +362,27 @@ body {
   webkit-tap-highlight-color: #222222; }
 
 .places-list {
+  text-align: left;
   position: relative;
-  bottom: -15vh;
+  bottom: -20vh;
   margin-top: 25px;
-  z-index: 100000; }
+  z-index: 100000;
+  color: white; }
+  .places-list i {
+    font-size: 30px;
+    margin-right: 5px; }
   .places-list a {
     color: white;
     font-size: 25px; }
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 1350px) {
     .places-list {
-      bottom: -30vh; } }
+      bottom: -35vh; } }
 
 .footer-cinta {
   width: 100vw;
   position: relative;
   bottom: 0;
-  z-index: 10000; }
+  z-index: 1000; }
   .footer-cinta.place {
     position: absolute; }
 
@@ -452,8 +445,8 @@ header.sede {
   height: 60vh;
   width: 100%;
   min-height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   background-position: center center !important;
   color: white; }
   header.sede .header-title-container {
@@ -564,9 +557,14 @@ header.catalogo {
   .services-content .image-container {
     max-height: 200px;
     overflow: hidden; }
+  .services-content .service-entry {
+    margin-bottom: 10px; }
   .services-content .text-container h3 {
     color: #b22f7b;
     text-transform: capitalize;
     font-size: 30px; }
+
+.capacitaciones h2 {
+  color: #b22f7b; }
 
 /*# sourceMappingURL=base.css.map */
