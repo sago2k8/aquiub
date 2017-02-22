@@ -1,9 +1,9 @@
 #! /bin/sh
 
-PUMA_CONFIG_FILE=/var/www/laboratoday/current/config/puma.rb
-PUMA_PID_FILE=/var/www/laboratoday/shared/pids/puma.pid
-PUMA_STATE=/var/www/laboratoday/shared/pids/puma.state
-PUMA_SOCKET=/var/www/laboratoday/shared/sockets/puma.sock
+PUMA_CONFIG_FILE=/var/www/aquiub/current/config/puma.rb
+PUMA_PID_FILE=/var/www/aquiub/shared/pids/puma.pid
+PUMA_STATE=/var/www/aquiub/shared/pids/puma.state
+PUMA_SOCKET=/var/www/aquiub/shared/sockets/puma.sock
 
 
 # check if puma process is running
