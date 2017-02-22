@@ -54,7 +54,11 @@ p {
 }
 
 /* Navigation*/
-
+.logo {
+     @media (max-width: 768px) {
+         display: none !important;
+     }
+}
 .navbar-default {
     background-color: transparent !important;
     border-color: fade($gray-darker, 5%);
@@ -148,6 +152,10 @@ p {
 
         }
     }
+    @media (max-width: 768px) {
+        background-color: rgba(178, 47, 123, 0.8) !important;
+        border: none !important;
+    }
 }
 
 /* Homepage Header*/
@@ -158,7 +166,7 @@ header.index {
     height: 100vh;
     width: 100%;
     min-height: auto;
-    background: url("../img/foto-cabecera-completa.png"); /* fallback for old browsers */
+    background: url("../img/home_background.png"); /* fallback for old browsers */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center ;
@@ -328,7 +336,7 @@ section.promociones {
     }
 }
 section.contact {
-    background: url('../img/foto-contacto.jpg');
+    background: url('../img/footer-background.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;

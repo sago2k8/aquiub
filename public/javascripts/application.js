@@ -31,7 +31,7 @@
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-    margin:10,
+    margin:5,
     nav:false,
     responsive:{
         0:{

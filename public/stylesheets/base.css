@@ -46,6 +46,10 @@ p {
   margin-bottom: 20px; }
 
 /* Navigation*/
+@media (max-width: 768px) {
+  .logo {
+    display: none !important; } }
+
 .navbar-default {
   background-color: transparent !important;
   border-color: fade(#222222, 5%);
@@ -120,6 +124,10 @@ p {
           .navbar-default.affix .nav > li > a:hover,
           .navbar-default.affix .nav > li > a:focus:hover {
             color: white; } }
+  @media (max-width: 768px) {
+    .navbar-default {
+      background-color: rgba(178, 47, 123, 0.8) !important;
+      border: none !important; } }
 
 /* Homepage Header*/
 header.index {
@@ -128,7 +136,7 @@ header.index {
   height: 100vh;
   width: 100%;
   min-height: auto;
-  background: url("../img/foto-cabecera-completa.png");
+  background: url("../img/home_background.png");
   /* fallback for old browsers */
   background-repeat: no-repeat;
   background-size: cover;
@@ -255,7 +263,7 @@ section.promociones {
     text-transform: uppercase; }
 
 section.contact {
-  background: url("../img/foto-contacto.jpg");
+  background: url("../img/footer-background.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -539,7 +547,8 @@ header.catalogo {
 
 .address {
   font-size: 25px;
-  padding: 20px 10px; }
+  padding: 20px 10px;
+  margin-bottom: 30px; }
   .address i {
     margin-right: 15px;
     color: #a8276f; }

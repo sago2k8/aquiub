@@ -1,20 +1,22 @@
 - error = @service.errors.include?(:name)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :name, :class => 'control-label'
+  =f.label :name,:caption => "Nombre:", :class => 'control-label'
   .controls
     =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
     %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
 - error = @service.errors.include?(:description)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :description, :class => 'control-label'
+  =f.label :description,:caption => "Description:", :class => 'control-label'
   .controls
-    =f.text_field :description, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    =f.text_field :description,:caption => "Descripcion:", :class => 'form-control input-large input-with-feedback', :autofocus => true
     %span.help-inline=error ? f.error_message_on(:description, :class => 'text-error') : pat(:example)
 - error = @service.errors.include?(:type)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :type, :class => 'control-label'
+  =f.label :type, :caption => "Tipo de servicios:":class => 'control-label'
   .controls
-    =f.text_field :type, :class => 'form-control input-large input-with-feedback'
+    %select.form-control.input-large.input-with-feedback{  name: 'service[type]' , required: true }
+      %option{ value: 1 } Pestañas
+      %option{ value: 2 } Cejas
     %span.help-inline=error ? f.error_message_on(:type, :class => 'text-error') : pat(:example)
 -# - error = @service.errors.include?(:place_id)
 -# %fieldset.control-group{:class => error ? 'has-error' : ''}

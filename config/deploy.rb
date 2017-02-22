@@ -20,7 +20,7 @@ set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['log','config/application.yml','deploy/padrino-jobs.conf']
+set :shared_paths, ['log','config/application.yml','deploy/padrino-jobs.conf', 'public/public']
 
 # Optional settings:
 #   set :user, 'foobar'    # Username in the server to SSH to.
@@ -93,19 +93,19 @@ namespace :puma do
   desc "Start the application"
   task :start do
     queue "echo '-----> Start Puma'"
-    queue "cd #{app_path} && RACK_ENV=#{stage} && bin/puma.sh start"
+    queue "cd #{app_path} && RACK_ENV=production && bin/puma.sh start"
   end
 
   desc "Stop the application"
   task :stop do
     queue "echo '-----> Stop Puma'"
-    queue "cd #{app_path} && RACK_ENV=#{stage} && bin/puma.sh stop"
+    queue "cd #{app_path} && RACK_ENV=production && bin/puma.sh stop"
   end
 
   desc "Restart the application"
   task :restart do
     queue "echo '-----> Restart Puma'"
-    queue "cd #{app_path} && RACK_ENV=#{stage} && bin/puma.sh restart"
+    queue "cd #{app_path} && RACK_ENV=production && bin/puma.sh restart"
   end
 end
 # For help in making your deploy script, see the Mina documentation:

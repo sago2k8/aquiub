@@ -100,7 +100,7 @@
         $(this).siblings('.list-menu-popover-delete-selected').find(':hidden[data-delete-many-ids=true]').
           val(listCheckboxes.filter(':checked').map(function() { return $(this).val(); }).toArray().join(','));
       });
-
+      $('.datepicker').datepicker();
       // Catch checkboxes check/uncheck and enable/disable the delete selected functionality
       listCheckboxes.on('click', function(ev) {
         ev.stopPropagation();

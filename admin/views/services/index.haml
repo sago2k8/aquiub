@@ -37,7 +37,7 @@
           %td.list-column.list-selectable
             =check_box_tag 'service_ids[]', :value => service.id, :class => 'list-selectable-checkbox'
           %td.list-column=service.name
-          %td.list-column=service.type
+          %td.list-column=service.type == 1 ? 'Pestañas' : 'Cejas'
           -# %td.list-column=service.place_id
           %td.list-column.list-row-action
             .list-row-action-wrapper

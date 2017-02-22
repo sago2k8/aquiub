@@ -22,9 +22,10 @@
 %section.portfolio{:id => "portfolio"}
   .container
     .row
-      .col-md-3.col-xs-12.title-container
-        %h2.text-center.portfolio-title Portafolio
-      .col-xs-12.col-md-9
+      .title-container
+        %h2.text-center.portfolio-title
+          Portafolio
+      .slide_container
         .owl-carousel
           .item
             .thumbnail.text-center
@@ -82,9 +83,8 @@
         .form-group
           %textarea.form-control{:placeholder => "Mensaje", :required => "true", :rows => "3"}
         %button.btn.send-button{:type => "submit"} Enviar
-  .container
-    .col-xs-12.places-list
-
+  .col-xs-12.places-list
+    .container
       %h2
         Visítanos
       %i.fa.fa-map-marker{"aria-hidden" => "true"}

@@ -43,10 +43,18 @@
   .container
     .row
       .map-title.col-xs-12.places-title
-        Ubicaciòn
+        Información
       .col-xs-12.address
         %i.fa.fa-map-marker{"aria-hidden" => "true"}
         =@sede.address
+      -if @sede.phone
+        .col-xs-12.col-sm-6.address
+          %i.fa.fa-phone{"aria-hidden" => "true"}
+          =@sede.phone
+      -if @sede.mobile
+        .col-xs-12.col-sm-6.address
+          %i.fa.fa-mobile{"aria-hidden" => "true"}
+          =@sede.mobile
   .col-xs-12.map
     .gmap-container
       %iframe.gmap{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyDGAf4J1m4Oyy_XA-tZBDQunUq168oycJI&q=#{@sede.latitude},#{@sede.longitude}&zoom=18", :style => "border:0", :width => "100%"}

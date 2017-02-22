@@ -1,18 +1,18 @@
 - error = @product.errors.include?(:name)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :name, :class => 'control-label'
+  =f.label :name,:caption => "Nombre:", :class => 'control-label'
   .controls
-    =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    =f.text_field :name,:caption => "Nombre:", :class => 'form-control input-large input-with-feedback', :autofocus => true
     %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
 - error = @product.errors.include?(:description)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :description, :class => 'control-label'
+  =f.label :description,:caption => "Descripcion:", :class => 'control-label'
   .controls
     =f.text_field :description, :class => 'form-control input-large input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:description, :class => 'text-error') : pat(:example)
 - error = @product.errors.include?(:product_picture)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :product_picture, :class => 'control-label'
+  =f.label :product_picture,:caption => "Foto del Producto:", :class => 'control-label'
   .controls
     =f.file_field :product_picture, :class => 'form-control input-large input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:product_picture, :class => 'text-error') : pat(:example)

@@ -2,26 +2,26 @@
   .col-md-6.col-xs-12
     - error = @place.errors.include?(:name)
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :name, :class => 'control-label'
+      =f.label :name, :caption => "Nombre:", :class => 'control-label'
       .controls
         =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
         %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
   .col-md-6.col-xs-12
     - error = @place.errors.include?(:address)
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :address, :class => 'control-label'
+      =f.label :address, :caption => "Direccion:", :class => 'control-label'
       .controls
         =f.text_field :address, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:address, :class => 'text-error') : pat(:example)
   .col-md-6.col-xs-12
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :state, :class => 'control-label'
+      =f.label :state, :caption => "Departamento:", :class => 'control-label'
       .controls
         =f.text_field :state, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:state, :class => 'text-error') : pat(:example)
   .col-md-6.col-xs-12
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :city, :class => 'control-label'
+      =f.label :city, :caption => "Ciudad:", :class => 'control-label'
       .controls
         =f.text_field :city, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:city, :class => 'text-error') : pat(:example)
@@ -42,21 +42,21 @@
   .col-md-3.col-xs-6
     - error = @place.errors.include?(:phone)
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :phone, :class => 'control-label'
+      =f.label :phone, :caption => "Telefono:",:class => 'control-label'
       .controls
         =f.text_field :phone, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:phone, :class => 'text-error') : pat(:example)
   .col-md-3.col-xs-6
     - error = @place.errors.include?(:mobile)
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :mobile, :class => 'control-label'
+      =f.label :mobile, :caption => "Celular:", :class => 'control-label'
       .controls
         =f.text_field :mobile, :class => 'form-control input-large input-with-feedback'
         %span.help-inline=error ? f.error_message_on(:mobile, :class => 'text-error') : pat(:example)
   .col-md-6.col-xs-12
     - error = @place.errors.include?(:header_picture)
     %fieldset.control-group{:class => error ? 'has-error' : ''}
-      =f.label :pictures, :class => 'control-label'
+      =f.label :pictures, :caption => "Imagenes:", :class => 'control-label'
       .controls
         =f.file_field :pictures, :class => 'form-control input-large input-with-feedback', multiple: true
         %span.help-inline=error ? f.error_message_on(:header_picture, :class => 'text-error') : pat(:example)
@@ -70,7 +70,7 @@
   .col-xs-12
     #map{:style => "width: 300px;height: 300px;"}
     %a.btn.btn-primary#find-on-map{:href => "#"}
-      Find-on-map
+      Busca en el mapa
   .form-actions
     =f.submit pat(:save), :class => 'btn btn-primary'
     &nbsp;
