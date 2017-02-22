@@ -195,22 +195,24 @@ section {
 }
 
 section.about {
+    height: 60vh;
     width: 100vw;
     @media (max-width: 1000px) {
+        height: 100% !important;
     .img-about {
     display: none;
+
   }
   }
     padding: 0 0;
     position: relative;
-    height: 50vh;
     min-height: auto;
     z-index: 100 ;
     .img-about {
       position: absolute;
       right:-100px;
       top: -50px;
-      height: 55vh;
+      height: 70vh;
       min-height: 300px;
       z-index: 10;
       img {
