@@ -42,7 +42,7 @@ header.catalogo {
     .entry {
       padding: 10px 15px;
       margin: 15px 0;
-      min-height: 580px;
+      min-height: 580px !important;
       .image-container {
         display: block;
         width: 100%;

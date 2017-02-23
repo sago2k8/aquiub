@@ -10,7 +10,7 @@
 .catalogo-container.row
   .catalogo-title-bar
     Catálogo de Productos
-  .table-container
+  .table-container.row
     - Product.all.each do |p|
       .entry.col-sm-6.col-xs-12.col-md-3
         .image-container{ style: "background-image: url(#{p.product_picture_url})" }
