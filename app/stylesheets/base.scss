@@ -195,7 +195,7 @@ section {
 }
 
 section.about {
-    height: 60vh;
+    height: 50vh;
     width: 100vw;
     @media (max-width: 1000px) {
         height: 100% !important;
@@ -212,7 +212,7 @@ section.about {
       position: absolute;
       right:-100px;
       top: -50px;
-      height: 70vh;
+      height: 60vh;
       min-height: 300px;
       z-index: 10;
       img {
@@ -330,6 +330,9 @@ section.promociones {
     .owl-next, .owl-prev {
         display: none !important;
 
+    }
+    .promotions {
+        display: block;
     }
     h3{
         color: #b22f7b;

@@ -42,17 +42,10 @@ $(document).ready(function(){
         },
     }
   });
-   $(".promotions").owlCarousel({
-    margin:5,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-    }
+   $(".carousel").owlCarousel({
+     margin:5,
+    loop:false,
+    items: 1
   });
 
 $.ajax({

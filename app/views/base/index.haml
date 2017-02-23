@@ -15,10 +15,11 @@
         %h2.text-primary.text-center Conócenos
       .col-xs-12.col-md-3.text-about-body
         %h4.black-text.text-left
-          Somos una empresa especializada en el servicio de extensiones de pestañas – cejas,  la distribución de los mejores productos para pestañas y cejas, nuestra prioridad es que nuestros clientes queden completamente satisfechos con nuestros servicios tanto en calidad como en atención. Constantemente buscamos innovar con nuevas tendencias, estilos y técnicas, esto junto con nuestros productos que son de la más alta calidad nos permite embellecer de la mejor manera a nuestras clientas
+          AQUIUB CASA DE PESTAÑAS es una compañía dedicada al embellecimiento de miradas, caracterizada por su excelente servicio y productos de alta calidad Somos DISTRIBUIDORES Y ACADEMIA.
+          Trabajamos por innovar y satisfacer las necesidades de nuestros clientes
       .col-xs-12.col-md-3.text-about-body
         %h4.black-text.text-left
-          En Aquiub Casa de Pestañas encontrarás un equipo de especialistas con alta experiencia en el campo facial, nos caracterizamos por dar un excelente servicio y dar gran énfasis en pestañas y cejas manejando productos 100% Garantizados.
+          Contamos con recurso humano experto en nuestras técnicas y procedimientos.  Buscamos expandirnos a nivel nacional e internacional dando a conocer nuestra marca altamente calificada y orientada a la belleza y bienestar.
 %section.portfolio{:id => "portfolio"}
   .container
     .row
@@ -54,16 +55,11 @@
 %section.promociones#promociones
   .container
     .row
-      .promotions
-        -@promotions.each do |p|
+      .carousel.owl-theme
+        -@promotions.each do |i|
           .item
-            .col-xs-6
-              %img.img-responsive{:src => "#{p.picture_url}", :alt => ""}/
-            .col-xs-6
-              %h3
-                =p.title
-              %p
-                =p.body
+            = partial 'base/item', locals: { item: i}
+
 
 
 %section#contact.contact

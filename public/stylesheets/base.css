@@ -155,7 +155,7 @@ section h2 {
   font-size: 50px; }
 
 section.about {
-  height: 60vh;
+  height: 50vh;
   width: 100vw;
   padding: 0 0;
   position: relative;
@@ -170,7 +170,7 @@ section.about {
     position: absolute;
     right: -100px;
     top: -50px;
-    height: 70vh;
+    height: 60vh;
     min-height: 300px;
     z-index: 10; }
     section.about .img-about img {
@@ -259,6 +259,8 @@ section.promociones {
   color: white; }
   section.promociones .owl-next, section.promociones .owl-prev {
     display: none !important; }
+  section.promociones .promotions {
+    display: block; }
   section.promociones h3 {
     color: #b22f7b;
     font-size: 35px;
