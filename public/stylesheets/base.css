@@ -5,6 +5,9 @@ body {
   height: 100%;
   width: 100%; }
 
+.social_media {
+  display: inline-block !important; }
+
 nav {
   background-color: transparent !important; }
 
@@ -572,7 +575,8 @@ header.catalogo {
     max-height: 200px;
     overflow: hidden; }
   .services-content .service-entry {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    min-height: 220px; }
   .services-content .text-container h3 {
     color: #b22f7b;
     text-transform: capitalize;
