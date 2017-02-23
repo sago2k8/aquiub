@@ -12,7 +12,7 @@
     %span.help-inline=error ? f.error_message_on(:description, :class => 'text-error') : pat(:example)
 - error = @service.errors.include?(:type)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :type, :caption => "Tipo de servicios:":class => 'control-label'
+  =f.label :type, :caption => "Tipo de servicios:",:class => 'control-label'
   .controls
     %select.form-control.input-large.input-with-feedback{  name: 'service[type]' , required: true }
       %option{ value: 1 } Pestañas

@@ -14,9 +14,8 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :expiration, :class => 'control-label'
   .controls
-    .input-group.date{"data-provide" => "datepicker"}
-      =f.date_field :expiration, :class => 'form-control input-large input-with-feedback datepicker'
-      %span.help-inline=error ? f.error_message_on(:expiration, :class => 'text-error') : pat(:example)
+    =f.date_field :expiration, :class => 'form-control input-large input-with-feedback datepicker'
+    %span.help-inline=error ? f.error_message_on(:expiration, :class => 'text-error') : pat(:example)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :picture, :caption => "Imagen:",:class => 'control-label'
   .controls
