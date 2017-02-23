@@ -34,7 +34,8 @@ header.catalogo {
     margin: 50px 0 0 0; }
   .catalogo-container .table-container .entry {
     padding: 10px 15px;
-    margin: 15px 0; }
+    margin: 15px 0;
+    min-height: 580px !important; }
     .catalogo-container .table-container .entry .image-container {
       display: block;
       width: 100%;
