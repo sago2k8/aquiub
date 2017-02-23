@@ -386,7 +386,7 @@ body {
   .places-list a {
     color: white;
     font-size: 25px; }
-  @media only screen and (min-width: 1350px) {
+  @media only screen and (min-width: 1000px) {
     .places-list {
       bottom: -35vh; } }
 
